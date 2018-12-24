@@ -10,7 +10,10 @@ public class TDARecursividadFactorialDeUnNumero {
         + objFact.factorialRecursivo(4));
         
         System.out.println("EL factorial de 4 mediante un Metodo con ciclo es : " 
-        + objFact.factorialCiclo(4));
+        + objFact.factorialCicloWhile(4));
+        
+        System.out.println("EL factorial de 4 mediante un Metodo con ciclo es : " 
+        + objFact.factorialCicloFor(4));
     }
 
     //4! = 1 * 2 * 3 * 4 = 24
@@ -29,13 +32,26 @@ public class TDARecursividadFactorialDeUnNumero {
             }
         }
     }
-    //Creando metodo factorial mediante ciclo
-    public int factorialCiclo(int n){
+    //Creando metodo factorial mediante ciclo while
+    public int factorialCicloWhile(int n){
         if(n < 0){
             return 0;
         }else{
             int factor = 1;
             while(n!=0){
+                factor = n * factor;
+                n--;
+            }
+            return factor;
+        }
+    }
+    //Creando metodo factorial mediante ciclo for
+    public int factorialCicloFor(int n){
+        if(n < 0){
+            return 0;
+        }else{
+            int factor = 1;            
+            for(int i=0 ;i <= n; i++){
                 factor = n * factor;
                 n--;
             }
