@@ -5,7 +5,7 @@
 public class TDASucesionFibonacci {
     public static void main(String[] args) {
         TDASucesionFibonacci objFibo = new TDASucesionFibonacci();
-        int numero = 4;
+        int numero = 5;
         System.out.println("La Sucesion Fibonacci de " + numero + " mediante recursividad es: " +
                 objFibo.fibonacciRecursivo(numero));
         System.out.println("La Sucesion Fibonacci de " + numero + " mediante ciclo es:" +
